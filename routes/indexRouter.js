@@ -11,8 +11,8 @@ Router.post("/logout", logoutController)
 Router.get("/create",isLoggedIn , createController);
 Router.get("/logout",logoutController);
 Router.post("/create", isLoggedIn ,postCreateController);
-Router.get("/link/:id", isLoggedIn ,redirectController);
-Router.get("/:username/:id", isLoggedIn ,redirectController);
+Router.get("/link/:id" ,redirectController);
+Router.get("/:username/:id",redirectController);
 Router.post("/delete/:id", isLoggedIn ,deleteController);
 
 
