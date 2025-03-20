@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Link</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white  min-h-screen">
+    <%- include('nav') %>
+    <div class="bg-black text-white flex items-center justify-center min-h-screen" >
+    <div class="bg-zinc-900 p-6 rounded-xl shadow-xl w-full max-w-md border border-gray-700 py-10">
+        <h2 class="text-2xl font-semibold text-gray-300 mb-4">Create a New Link</h2>
+        
+        <form action="/create" method="POST">
+            <label class="block text-gray-400 mb-1">Original Link</label>
+            <input type="url" name="originalLink" class="w-full p-3 rounded-md bg-zinc-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 text-white mb-4" placeholder="Enter the original link" required>
+        
+            <div class="flex items-center mb-4">
+                <input type="checkbox" id="addName" name="addName" class="mr-2 w-5 h-5 text-blue-600 bg-zinc-800 border-gray-700 rounded focus:ring-2 focus:ring-blue-500">
+                <label for="addName" class="text-gray-400">Do you want to add your name to the link?</label>
+            </div>
+        
+            <button type="submit" class="w-full bg-blue-600 px-4 py-2 rounded-md hover:bg-blue-700 transition">
+                Create Link
+            </button>
+        </form>
+        
+    </div>
+</div>
+</body>
+</html>
